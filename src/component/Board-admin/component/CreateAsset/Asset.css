@@ -1,0 +1,1278 @@
+/* .mediaViewInfo {
+  --web-view-name: Manage Asset > Create Asset;
+  --web-view-id: Manage_Asset__Create_Asset;
+  --web-scale-to-fit: true;
+  --web-scale-to-fit-type: width;
+  --web-scale-on-resize: true;
+  --web-navigate-on-keypress: true;
+  --web-enable-deep-linking: true;
+  --web-page-font: Arial;
+}
+:root {
+  --web-view-ids: Manage_Asset__Create_Asset;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+#Manage_Asset__Create_Asset {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  font-family: Arial;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  --web-view-name: Manage Asset > Create Asset;
+  --web-view-id: Manage_Asset__Create_Asset;
+  --web-scale-to-fit: true;
+  --web-scale-to-fit-type: width;
+  --web-scale-on-resize: true;
+  --web-navigate-on-keypress: true;
+  --web-enable-deep-linking: true;
+  --web-page-font: Arial;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#Navbar_fl {
+  position: absolute;
+  width: 1181px;
+  height: 147px;
+  left: 556px;
+  top: 9px;
+  overflow: visible;
+}
+#Menu_fm {
+  position: absolute;
+  width: 269px;
+  height: 38px;
+  left: 0px;
+  top: 109px;
+  overflow: visible;
+}
+#NavbarCreate_fn {
+  position: absolute;
+  width: 123px;
+  height: 38px;
+  left: 146px;
+  top: 0px;
+  overflow: visible;
+}
+#transparent_fo {
+  fill: transparent;
+}
+.transparent_fo {
+  position: absolute;
+  overflow: visible;
+  width: 115px;
+  height: 38px;
+  left: 4px;
+  top: 0px;
+}
+#Create_user_fp {
+  opacity: 0.7;
+  left: 39px;
+  top: 10px;
+  position: absolute;
+  overflow: visible;
+  width: 85px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+#NavbarView_fq {
+  position: absolute;
+  width: 146px;
+  height: 38px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#transparent_fs {
+  fill: transparent;
+}
+.transparent_fs {
+  position: absolute;
+  overflow: visible;
+  width: 146px;
+  height: 38px;
+  left: 0px;
+  top: 0px;
+}
+#View_user_fs {
+  left: 38px;
+  top: 10px;
+  position: absolute;
+  overflow: visible;
+  width: 71px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+#Dropusername_ft {
+  position: absolute;
+  width: 114px;
+  height: 38px;
+  left: 1067px;
+  top: 0px;
+  overflow: visible;
+}
+#transparent_fv {
+  fill: transparent;
+}
+.transparent_fv {
+  position: absolute;
+  overflow: visible;
+  width: 114px;
+  height: 38px;
+  left: 0px;
+  top: 0px;
+}
+#Label_fv {
+  opacity: 0.7;
+  left: 5px;
+  top: 7px;
+  position: absolute;
+  overflow: visible;
+  width: 79px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -4px;
+  text-align: center;
+  font-family: HelveticaNeue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(250, 252, 252, 1);
+}
+#icondropdown_arrowdefault_fw {
+  opacity: 0.7;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 91px;
+  top: 11px;
+  overflow: visible;
+}
+#DropdownButtonCarotDown_backgr_fx {
+  fill: transparent;
+}
+.DropdownButtonCarotDown_backgr_fx {
+  position: absolute;
+  overflow: visible;
+  width: 14px;
+  height: 14px;
+  left: 0px;
+  top: 0px;
+}
+#icondropdown_arrow_fz {
+  fill: rgba(255, 255, 255, 1);
+}
+.icondropdown_arrow_fz {
+  overflow: visible;
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  left: 1px;
+  top: 4px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Create_New_Asset_fz {
+  left: 546px;
+  top: 168px;
+  position: absolute;
+  overflow: visible;
+  width: 165px;
+  white-space: nowrap;
+  --web-animation: fadein 0.3s ease-out;
+  --web-action-type: page;
+  --web-action-target: Manage_Asset___Create_Asset___dropdown.html;
+  cursor: pointer;
+  line-height: 67px;
+  margin-top: -23.5px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(207, 35, 56, 1);
+}
+#Form_f {
+  position: absolute;
+  width: 380px;
+  height: 354px;
+  left: 552px;
+  top: 219px;
+  overflow: visible;
+}
+#DOB_f {
+  position: absolute;
+  width: 378px;
+  height: 86px;
+  left: 0px;
+  top: 99px;
+  overflow: visible;
+}
+#Specification_f {
+  left: 0px;
+  top: 9px;
+  position: absolute;
+  overflow: visible;
+  width: 92px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(33, 37, 41, 1);
+}
+#Rectangle_330_f {
+  fill: rgba(255, 255, 255, 1);
+  stroke: rgba(112, 112, 112, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_330_f {
+  position: absolute;
+  overflow: visible;
+  width: 280px;
+  height: 86px;
+  left: 98px;
+  top: 0px;
+  border: solid 2px rgba(112, 112, 112, 1);
+  border-radius: 5px;
+}
+#State_f {
+  position: absolute;
+  width: 214px;
+  height: 45px;
+  left: 0px;
+  top: 252px;
+  overflow: visible;
+}
+#state_f {
+  position: absolute;
+  width: 112px;
+  height: 45px;
+  left: 102px;
+  top: 0px;
+  overflow: visible;
+}
+#available_f {
+  position: absolute;
+  width: 82px;
+  height: 21px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Label_f {
+  left: 19px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 64px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -4px;
+  text-align: left;
+  font-family: HelveticaNeue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(33, 37, 41, 1);
+}
+#Radio_f {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 4px;
+  overflow: visible;
+}
+#Oval_f {
+  fill: rgba(207, 35, 56, 1);
+  stroke: rgba(207, 35, 56, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Oval_f {
+  overflow: visible;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Ellipse_3_fa {
+  fill: rgba(255, 255, 255, 1);
+}
+.Ellipse_3_fa {
+  position: absolute;
+  overflow: visible;
+  width: 6px;
+  height: 6px;
+  left: 5px;
+  top: 5px;
+}
+#not_available_fb {
+  position: absolute;
+  width: 112px;
+  height: 21px;
+  left: 0px;
+  top: 24px;
+  overflow: visible;
+}
+#Label_fc {
+  left: 19px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 94px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -4px;
+  text-align: left;
+  font-family: HelveticaNeue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(33, 37, 41, 1);
+}
+#Radio_fd {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 4px;
+  overflow: visible;
+}
+#Oval_fe {
+  fill: rgba(255, 255, 255, 1);
+  stroke: rgba(182, 182, 182, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 10;
+  shape-rendering: auto;
+}
+.Oval_fe {
+  position: absolute;
+  overflow: visible;
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 0px;
+}
+#State_ff {
+  left: 0px;
+  top: 2px;
+  position: absolute;
+  overflow: visible;
+  width: 38px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(33, 37, 41, 1);
+}
+#Joined_Date_fg {
+  position: absolute;
+  width: 380px;
+  height: 35px;
+  left: 0px;
+  top: 199px;
+  overflow: visible;
+}
+#Installed_Date_fh {
+  left: 0px;
+  top: 9px;
+  position: absolute;
+  overflow: visible;
+  width: 99px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(33, 37, 41, 1);
+}
+#Rectangle_330_fi {
+  fill: rgba(255, 255, 255, 1);
+  stroke: rgba(112, 112, 112, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_330_fi {
+  position: absolute;
+  overflow: visible;
+  width: 280px;
+  height: 35px;
+  left: 100px;
+  top: 0px;
+  border: solid 2px rgba(112, 112, 112, 1);
+  border-radius: 5px;
+}
+#calendar-date-fill_fj {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 349px;
+  top: 10px;
+  overflow: visible;
+}
+#Path_2_fk {
+  fill: rgba(112, 112, 112, 1);
+}
+.Path_2_fk {
+  overflow: visible;
+  position: absolute;
+  width: 16px;
+  height: 10.246px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Path_3_fl {
+  fill: rgba(112, 112, 112, 1);
+}
+.Path_3_fl {
+  overflow: visible;
+  position: absolute;
+  width: 16px;
+  height: 11px;
+  left: 0px;
+  top: 5px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Joined_Date_fm {
+  position: absolute;
+  width: 378px;
+  height: 35px;
+  left: 0px;
+  top: 49px;
+  overflow: visible;
+}
+#Category_fn {
+  left: 0px;
+  top: 9px;
+  position: absolute;
+  overflow: visible;
+  width: 66px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(33, 37, 41, 1);
+}
+#Path_8_fo {
+  fill: rgba(255, 255, 255, 1);
+  stroke: rgba(112, 112, 112, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Path_8_fo {
+  overflow: visible;
+  position: absolute;
+  width: 280px;
+  height: 35px;
+  left: 98px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  border: solid 2px rgba(112, 112, 112, 1);
+  border-radius: 5px;
+}
+#Cancel_btn_fp {
+  position: absolute;
+  width: 82px;
+  height: 37px;
+  left: 296px;
+  top: 317px;
+  overflow: visible;
+  transition: all 0.3s ease-out;
+  --web-animation: fadein 0.3s ease-out;
+  --web-action-type: page;
+  --web-action-target: Manage_Asset.html;
+  cursor: pointer;
+}
+#Secondary__6C757D_fq {
+  fill: transparent;
+  stroke: rgba(108, 117, 125, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Secondary__6C757D_fq {
+  position: absolute;
+  overflow: visible;
+  width: 82px;
+  height: 37px;
+  left: 0px;
+  top: 0px;
+}
+#Cancel_fr {
+  left: 16px;
+  top: 9px;
+  position: absolute;
+  overflow: visible;
+  width: 51px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(108, 117, 125, 1);
+}
+#Save_btn_fs {
+  position: absolute;
+  width: 68px;
+  height: 37px;
+  left: 198px;
+  top: 317px;
+  overflow: visible;
+}
+#Primary__007BFF_ft {
+  fill: rgba(233, 66, 77, 1);
+  stroke: rgba(207, 35, 56, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Primary__007BFF_ft {
+  overflow: visible;
+  position: absolute;
+  width: 68px;
+  height: 37px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Save_fu {
+  left: 16px;
+  top: 9px;
+  position: absolute;
+  overflow: visible;
+  width: 37px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+#Name_fw {
+  position: absolute;
+  width: 378px;
+  height: 35px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Name_fx {
+  left: 0px;
+  top: 9px;
+  position: absolute;
+  overflow: visible;
+  width: 44px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Helvetica Neue, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(33, 37, 41, 1);
+}
+#Rectangle_330_fx {
+  fill: rgba(255, 255, 255, 1);
+  stroke: rgba(112, 112, 112, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_330_fx {
+  position: absolute;
+  overflow: visible;
+  width: 280px;
+  height: 35px;
+  left: 98px;
+  top: 0px;
+  border: solid 2px rgba(112, 112, 112, 1);
+  border-radius: 5px;
+}
+#icondropdown_arrow_fa {
+  fill: rgba(112, 112, 112, 1);
+}
+.icondropdown_arrow_fa {
+  overflow: visible;
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  left: 350px;
+  top: 64px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#narbav_f {
+  position: absolute;
+  width: 1920px;
+  height: 151px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+#Rectangle_329_f {
+  fill: rgba(207, 35, 56, 1);
+  stroke: rgba(112, 112, 112, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Rectangle_329_f {
+  position: absolute;
+  overflow: visible;
+  width: 1920px;
+  height: 72px;
+  left: 0px;
+  top: 0px;
+}
+#Manage_Asset__Create_New_Asset_f {
+  left: 138px;
+  top: 16px;
+  position: absolute;
+  overflow: visible;
+  width: 313px;
+  white-space: nowrap;
+  line-height: 67px;
+  margin-top: -23.5px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(250, 252, 252, 1);
+}
+#account_f {
+  position: absolute;
+  width: 198px;
+  height: 135px;
+  left: 1573px;
+  top: 16px;
+  overflow: visible;
+}
+#account_fb {
+  position: absolute;
+  width: 87px;
+  height: 27px;
+  left: 104px;
+  top: 0px;
+  overflow: visible;
+}
+#icondropdown_arrowdefault_fa {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 73px;
+  top: 11px;
+  overflow: visible;
+}
+#DropdownButtonCarotDown_backgr_fb {
+  fill: transparent;
+}
+.DropdownButtonCarotDown_backgr_fb {
+  position: absolute;
+  overflow: visible;
+  width: 14px;
+  height: 14px;
+  left: 0px;
+  top: 0px;
+}
+#icondropdown_arrow_fc {
+  fill: rgba(255, 255, 255, 1);
+}
+.icondropdown_arrow_fc {
+  overflow: visible;
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  left: 1px;
+  top: 4px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#binhnv_f {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 63px;
+  white-space: nowrap;
+  line-height: 67px;
+  margin-top: -23.5px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(250, 252, 252, 1);
+}
+#log_out_f {
+  opacity: 0;
+  position: absolute;
+  width: 198px;
+  height: 40px;
+  left: 0px;
+  top: 95px;
+  overflow: visible;
+}
+#Path_1_f {
+  fill: rgba(239, 241, 245, 1);
+}
+.Path_1_f {
+  overflow: visible;
+  position: absolute;
+  width: 198px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Log_out_fa {
+  left: 15.13px;
+  top: 6.5px;
+  position: absolute;
+  overflow: visible;
+  width: 69px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(33, 37, 41, 1);
+}
+#change_pw_fb {
+  opacity: 0;
+  position: absolute;
+  width: 198px;
+  height: 40px;
+  left: 0px;
+  top: 56px;
+  overflow: visible;
+  transition: all 0.3s ease-out;
+  --web-animation: fadein 0.3s ease-out;
+  --web-action-type: page;
+  --web-action-target: Home.html;
+  cursor: pointer;
+}
+#Path_1_fc {
+  fill: rgba(239, 241, 245, 1);
+}
+.Path_1_fc {
+  overflow: visible;
+  position: absolute;
+  width: 198px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Change_password_fd {
+  left: 15.13px;
+  top: 7.583px;
+  position: absolute;
+  overflow: visible;
+  width: 158px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(33, 37, 41, 1);
+}
+#Menu_fe {
+  position: absolute;
+  width: 262px;
+  height: 370px;
+  left: 138px;
+  top: 275px;
+  overflow: visible;
+}
+#Report_ff {
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 310px;
+  overflow: visible;
+  --web-animation: fadein 0.3s ease-out;
+  --web-action-type: page;
+  --web-action-target: Report.html;
+  cursor: pointer;
+}
+#Path_1_fg {
+  fill: rgba(239, 241, 245, 1);
+}
+.Path_1_fg {
+  overflow: visible;
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Report_fh {
+  left: 22px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 65px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(33, 37, 41, 1);
+}
+#Request_for_Returning_fi {
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 248px;
+  overflow: visible;
+}
+#Path_1_fj {
+  fill: rgba(239, 241, 245, 1);
+}
+.Path_1_fj {
+  overflow: visible;
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Request_for_Returning_fk {
+  left: 22px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 209px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(33, 37, 41, 1);
+}
+#Manage_Assignment_fl {
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 186px;
+  overflow: visible;
+  --web-animation: fadein 0.3s ease-out;
+  --web-action-type: page;
+  --web-action-target: Manage_Assignment.html;
+  cursor: pointer;
+}
+#Path_1_fm {
+  fill: rgba(239, 241, 245, 1);
+}
+.Path_1_fm {
+  overflow: visible;
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Manage_Assignment_fo {
+  left: 22px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 193px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(33, 37, 41, 1);
+}
+#Manage_Asset_fo {
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 124px;
+  overflow: visible;
+}
+#Path_1_fp {
+  fill: rgba(207, 35, 56, 1);
+}
+.Path_1_fp {
+  overflow: visible;
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Manage_Asset_fq {
+  left: 22px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 133px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(250, 252, 252, 1);
+}
+#Manage_User_fr {
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 62px;
+  overflow: visible;
+  transition: all 0.3s ease-out;
+  --web-animation: fadein 0.3s ease-out;
+  --web-action-type: page;
+  --web-action-target: Manage_User.html;
+  cursor: pointer;
+}
+#Path_1_fs {
+  fill: rgba(239, 241, 245, 1);
+}
+.Path_1_fs {
+  overflow: visible;
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Manage_User_ft {
+  left: 22px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 125px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(33, 37, 41, 1);
+}
+#Home_fu {
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+  transition: all 0.3s ease-out;
+  --web-animation: fadein 0.3s ease-out;
+  --web-action-type: page;
+  --web-action-target: Home.html;
+  cursor: pointer;
+}
+#Path_1_fv {
+  fill: rgba(239, 241, 245, 1);
+}
+.Path_1_fv {
+  overflow: visible;
+  position: absolute;
+  width: 262px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Home_fw {
+  left: 22px;
+  top: 18px;
+  position: absolute;
+  overflow: visible;
+  width: 58px;
+  white-space: nowrap;
+  line-height: 24px;
+  margin-top: -2px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(33, 37, 41, 1);
+}
+#Logo_fx {
+  position: absolute;
+  width: 248px;
+  height: 120px;
+  left: 138px;
+  top: 121px;
+  overflow: visible;
+}
+#Online_Asset_Management_fy {
+  left: 0px;
+  top: 93px;
+  position: absolute;
+  overflow: visible;
+  width: 249px;
+  white-space: nowrap;
+  line-height: 67px;
+  margin-top: -23.5px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(207, 35, 56, 1);
+}
+#Logo_f {
+  position: absolute;
+  width: 92px;
+  height: 93px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+} */
+
+.DropDown {
+  /* position: absolute;
+  overflow: visible; */
+  /* width: 280px;
+  height: 86px; */
+  /* left: 98px;
+  top: 0px; */
+  border: solid 2px rgb(184, 182, 182);
+  border-radius: 5px;
+}
+
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  border: solid 2px rgb(184, 182, 182);
+  border-radius: 5px;
+  border-style: none;
+} */
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border: solid 2px rgb(184, 182, 182);
+  border-radius: 5px;
+}
+
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+.category_area {
+  display: flex;
+}
+.category_input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.boder_search {
+  position: relative;
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  border: #ced4da solid 1px;
+  line-height: 1.5;
+  cursor: pointer;
+  padding: 5px;
+}
+.angledown {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+}
+.check {
+  margin-right: 10px;
+  color: #dc3545;
+  cursor: pointer;
+}
+.times {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.list_below ul li {
+  padding: 3px 0px;
+  background: rgb(240, 237, 233); 
+  text-decoration: none;
+  list-style: none;
+  padding-left: 5px;
+}
+.list_below ul li:hover {
+  background: #dc3545;
+  width:100%;
+}
+.list_below {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+#list {
+  padding-left: 0px;
+  position: absolute;
+  border: solid 2px rgb(226, 217, 217);
+  border-radius: 5px;
+  width: 100%;
+
+  
+}
+.add_user {
+  display: flex;
+  justify-content: space-between;
+  cursor: text;
+}
+
+.add_cate {
+  display: flex;
+  justify-content: space-between;
+  cursor: text;
+}
+#end_li:hover {
+  background: rgb(240, 237, 233);
+}
+.left input {
+  text-decoration: none;
+  width: 200px;
+  border: black solid 1px;
+}
+
+.right input {
+  text-decoration: none;
+  width: 50px;
+  border: black solid 1px;
+}
+
+.category_area {
+}
+
+#error {
+  display: block;
+  color: red;
+  margin: 5px 0 0 0;
+}
+
+#link {
+  display: block;
+  color: red;
+  margin: 5px 0 0 0;
+}
+
+#input_add {
+  padding-left: 5px;
+}
+
+
+
+
+.datepicker{
+    position: relative;
+    width: 100%;
+}
+.icon-date{
+    position: absolute;
+    top:x 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    cursor: pointer;
+    color: rgb(88, 87, 87);
+}
+.category_item {
+  display: flex;
+  justify-content: space-between;
+}
+.name_area{
+  display: inline-block;
+  padding: 0px 15px;
+  cursor: pointer;
+}
+
+
+

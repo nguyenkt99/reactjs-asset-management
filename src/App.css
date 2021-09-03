@@ -1,0 +1,174 @@
+.App {
+  margin: auto;
+  padding: auto;
+}
+.mediaViewInfo {
+  --web-view-name: Home;
+  --web-view-id: Home;
+  --web-scale-to-fit: true;
+  --web-scale-to-fit-type: width;
+  --web-scale-on-resize: true;
+  --web-navigate-on-keypress: true;
+  --web-enable-deep-linking: true;
+  --web-page-font: Arial;
+}
+:root {
+  --web-view-ids: Home;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+#Home {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  font-family: Arial;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  --web-view-name: Home;
+  --web-view-id: Home;
+  --web-scale-to-fit: true;
+  --web-scale-to-fit-type: width;
+  --web-scale-on-resize: true;
+  --web-navigate-on-keypress: true;
+  --web-enable-deep-linking: true;
+  --web-page-font: Arial;
+}
+.container {
+  max-width: max-content;
+}
+/* .navbar{
+  background-color:#CF2338;
+  height: auto;
+  display:inline-block;
+} */
+.navbar-nav {
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  z-index: 9999;
+}
+.navbrand-item {
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: auto;
+  justify-content: left;
+  position: relative;
+  display: inline-block;
+  right: 500px;
+}
+.nav-item {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  margin: auto;
+  justify-content: left;
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  margin-top: auto;
+}
+@media screen and (max-width: 575px) {
+  .__conNAV_LOGIN {
+    position: fixed;
+    background-color: #cf2338;
+    /* display:flex; */
+    width: 100%;
+    align-items: left;
+  }
+  .nav-item {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 490px;
+    justify-content: left;
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+    align-content: start;
+  }
+}
+#Logo_mjv {
+  position: absolute;
+  width: 385px;
+  height: 56px;
+  left: 138px;
+  top: 10px;
+  overflow: visible;
+}
+#Online_Asset_Management_mjw {
+  left: 6em;
+  top: 12px;
+  position: absolute;
+  overflow: visible;
+  width: 298px;
+  white-space: nowrap;
+  line-height: 67px;
+  margin-top: -21.5px;
+  text-align: left;
+  font-family: Segoe UI, Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(250, 250, 250, 1);
+}
+#Logo_mjx {
+  position: absolute;
+  width: 55px;
+  height: 56px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.dialog-first-login {
+  bottom: 34em;
+}
+.btnsave {
+  margin-left: 280px;
+  background-color: #cf2338;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.cardReset {
+  width: 28em;
+  padding-bottom: 0.4em;
+}
+.resetform {
+  margin-left: 2.5em;
+  margin-right: 2em;
+}
+.resettitle {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+.first-login {
+  width: 245px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  margin-left: 15px !important;
+}
+.drop-filter {
+  min-width: 180px;
+}
+#close-btn {
+  cursor: pointer;
+}
+
+.table-thead {
+  cursor: pointer;
+}

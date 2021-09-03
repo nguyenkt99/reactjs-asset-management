@@ -1,0 +1,27 @@
+#drop-show-assignment {
+  width: 220px;
+}
+#undo-assignment {
+  color: #455eeb;
+  font-size: 130%;
+  width: 22px;
+  height: 22px;
+}
+#assignment-date-picker {
+  background-color: #f5faff;
+}
+
+#toast-error-assignment {
+  padding-top: 80px !important;
+}
+
+.assigned-date{
+  display: flex;
+  position: relative;
+}
+
+#date-icon {
+  position: absolute;
+  top: 20%;
+  right: 6%;
+}

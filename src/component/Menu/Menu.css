@@ -1,0 +1,51 @@
+.MenuImage {
+    width: 90px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.MenuTitles {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h3 {
+    padding-left: 15px;
+    margin-bottom: 17px;
+    color: #cf2338;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.MenuColumn {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.list-group-item {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding-right: 2em;
+    padding-top: 15px;
+    display: block;
+    background-color: #eff1f5;
+    height: 60px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.non-text-decoration {
+    text-decoration: none;
+}
+
+.active {
+    background-color: #cf2338 !important;
+    border-color: #cf2338 !important;
+}
+
+.list-group {
+    width: max-content;
+    min-width: 270px;
+}
