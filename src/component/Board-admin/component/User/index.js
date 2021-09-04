@@ -308,7 +308,7 @@ export default function User() {
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>
-                <Col >
+                <Col>
                     <Dropdown autoClose="outside" className="drop-filter">
                         <Button className="dropdown-button col-md-6 col-sm-12" disabled>
                             State
@@ -360,8 +360,7 @@ export default function User() {
                         <Link className="btn" style={{ color: "#FFF", backgroundColor: '#CF2338', borderColor: '#CF2338' }} to="./create-user">Create new user</Link>
                     </div>
                 </Col>
-            </Row>
-            <br />
+            </Row>  
             <Row>
                 <Table responsive>
                     <thead>
@@ -414,7 +413,6 @@ export default function User() {
                     </tbody>
                 </Table>
             </Row>
-            <br />
             <Col className="float-end">
                 <Pagination size="sm">
                     <Pagination.Prev disabled={currentPage < 2} onClick={() => setCurrentPage(currentPage - 1)}>Previous</Pagination.Prev>

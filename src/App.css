@@ -1,3 +1,6 @@
+body{
+  font-size: 12px!important;
+}
 .App {
   margin: auto;
   padding: auto;
@@ -21,10 +24,23 @@
   box-sizing: border-box;
   border: none;
 }
+
+button{
+  font-size: 12px!important;
+}
+input{
+  font-size: 12px!important;
+  outline: none;
+}
+
+a{
+  text-decoration: none;
+  font-size: 13px!important;
+}
 #Home {
   position: absolute;
-  width: 1920px;
-  height: 1080px;
+  width: 1420px;
+  height: auto;
   font-family: Arial;
   background-color: rgba(255, 255, 255, 1);
   overflow: hidden;
@@ -64,7 +80,7 @@
   right: 500px;
 }
 .nav-item {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
   text-decoration: none;
   margin: auto;

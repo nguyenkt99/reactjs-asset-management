@@ -1,5 +1,5 @@
 .MenuImage {
-    width: 90px;
+    width: 70px;
     margin-top: 5px;
     margin-left: 15px;
 }
@@ -26,12 +26,14 @@ h3 {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding-right: 2em;
-    padding-top: 15px;
+    /* padding-right: 2em; */
+    /* padding-top: 10px; */
+    padding: 10px;
     display: block;
     background-color: #eff1f5;
-    height: 60px;
-    padding-left: 15px;
+    /* height: 60px; */
+    /* padding-left: 15px; */
+    font-size: 14px;
     margin-bottom: 5px;
     cursor: pointer;
 }
@@ -47,5 +49,5 @@ h3 {
 
 .list-group {
     width: max-content;
-    min-width: 270px;
+    min-width: 220px;
 }
