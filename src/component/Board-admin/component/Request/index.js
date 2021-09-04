@@ -199,7 +199,7 @@ export default function Request() {
 
     return (
         <>
-            <ModalTitle style={{ color: '#CF2338' }}>Request List</ModalTitle>
+            <h5 style={{ color: '#CF2338' }}>Request List</h5>
             <Row>
                 <Col sm={2}>
                     <Dropdown autoClose="outside" className="drop-filter">
@@ -302,7 +302,7 @@ export default function Request() {
                                 State
                                 <BsFillCaretDownFill/>
                             </th>
-                            <th style={{ width: "8%" }}></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -321,12 +321,12 @@ export default function Request() {
                                         <div className="d-flex justify-content-evenly">
                                             {r.state === STATE.WAITING_FOR_RETURNING ?
                                                 <>
-                                                    <FontAwesomeIcon style={{ cursor: "pointer" }} color="red" size="lg" icon={faCheck} onClick={() => onClickAcceptRequest(r.id)} />
+                                                    <FontAwesomeIcon style={{ cursor: "pointer", marginRight: "8px" }} color="red" size="lg" icon={faCheck} onClick={() => onClickAcceptRequest(r.id)} />
                                                     <FontAwesomeIcon style={{ cursor: "pointer" }} size="lg" icon={faTimes} onClick={() => onClickCancelRequest(r.id)} />
                                                 </>
                                                 :
                                                 <>
-                                                    <FontAwesomeIcon color="#ccc" size="lg" icon={faCheck} />
+                                                    <FontAwesomeIcon style={{ marginRight: "8px" }} color="#ccc" size="lg" icon={faCheck} />
                                                     <FontAwesomeIcon color="#ccc" size="lg" icon={faTimes} />
                                                 </>
                                             }

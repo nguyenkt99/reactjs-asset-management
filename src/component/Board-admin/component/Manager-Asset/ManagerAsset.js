@@ -327,7 +327,7 @@ export default function User() {
           style={{ display: 'block', marginLeft: '32px' }}></Modal.Footer>
       </Modal>
 
-      <ModalTitle style={{ color: '#CF2338' }}>Asset List</ModalTitle>
+      <h5 style={{ color: '#CF2338' }}>Asset List</h5>
       <div className='d-flex justify-content-between'>
         <Dropdown autoClose='outside' className='drop-filter'>
           <Button

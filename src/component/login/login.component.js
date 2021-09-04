@@ -195,8 +195,8 @@ export default class Login extends Component {
                         }
                       />
                     </div>
-                    <div className="px-5">
-                      <Link style={{ textDecoration: "none" }} className="float-end" to="/forgot">
+                    <div>
+                      <Link style={{ textDecoration: "none" }} className="float-end mx-1" to="/forgot">
                         Forgotten password?
                       </Link>
                     </div>

@@ -125,7 +125,7 @@ const Home = (props) => {
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className='mr-auto' navbar>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle nav caret id="nav-username">
                 {user.username}
               </DropdownToggle>
               <DropdownMenu right>
@@ -203,7 +203,7 @@ const Home = (props) => {
       {/* Change password here */}
       <Modal className='changepass-modal' centered isOpen={modalpw} toggle={toggleModalpw}>
         <ModalHeader style={{ backgroundColor: '#d8d8d8' }, { border: 'solid 2px' }}>
-          <h5 style={{ color: '#CF2338' }}>Change Password</h5>
+          <p style={{ color: '#CF2338' }}>Change Password</p>
         </ModalHeader>
         <ModalBody style={{ border: 'solid 2px' }}>
           <ChangePassword isOpenModel={setModalpw} />

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row, Table, Modal, Form, Button, ModalTitle } from "react-bootstrap";
 import "./UserAssignment.css";
-import { CgUndo } from 'react-icons/cg';
+import { FaUndo } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { get, put, post } from '../../../httpHelper';
 import { BsFillCaretDownFill } from "react-icons/bs";
-import './UserAssignment.css'
 
 let assignmentCode = 0
 
@@ -222,7 +221,7 @@ export default function UserAssignment() {
 
   return (
     <div>
-      <ModalTitle style={{ color: "#CF2338" }}>My Assignment</ModalTitle>
+      <h5 style={{ color: "#CF2338" }}>My Assignment</h5>
       <br />
       <Row>
         <Table responsive>
@@ -281,16 +280,16 @@ export default function UserAssignment() {
                           <>
                             <FontAwesomeIcon style={{ cursor: "pointer" }} color="red" size="lg" icon={faCheck} onClick={() => handleAcceptClick(a.id)} />
                             <FontAwesomeIcon style={{ cursor: "pointer" }} size="lg" icon={faTimes} onClick={() => handleDeclineClick(a.id)} />
-                            <CgUndo id="undo-assignment" style={{ color: '#ccc' }} />
+                            <FaUndo id="undo-assignment" style={{ color: '#ccc' }} />
                           </>
                           :
                           <>
                             <FontAwesomeIcon color="#ccc" size="lg" icon={faCheck} />
                             <FontAwesomeIcon color="#ccc" size="lg" icon={faTimes} />
                             {a.state === STATE.ACCEPTED && !a.isCreatedRequest ?
-                              <CgUndo id="undo-assignment" style={{ cursor: 'pointer' }} onClick={() => onClickRequestForReturning(a.id)} />
+                              <FaUndo id="undo-assignment" style={{ cursor: 'pointer' }} onClick={() => onClickRequestForReturning(a.id)} />
                               :
-                              <CgUndo id="undo-assignment" style={{ color:'#ccc' }} />
+                              <FaUndo id="undo-assignment" style={{ color:'#ccc' }} />
                             }
                           </>
                         }

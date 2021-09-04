@@ -239,30 +239,31 @@ function EditUser(props) {
     }
 
     return (
-        <>
+        <div className="p-5">
             <h5 className="mb-4" style={{ color: "#CF2338" }}>Edit user</h5>
+            <Col xs={12} sm={12} md={7}>
             <Form onSubmit={handleSubmit}>
                 <Form.Group as={Row} className="mb-3" controlId="firstName">
-                    <Form.Label column sm={2}>
+                    <Form.Label column sm={3}>
                         First Name
                     </Form.Label>
-                    <Col xs={12} sm={5}>
+                    <Col>
                         <Form.Control name="firstName" type="text" required maxLength={50} value={inputs.firstName} disabled />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="lastName">
-                    <Form.Label column sm={2}>
+                    <Form.Label column sm={3}>
                         Last Name
                     </Form.Label>
-                    <Col xs={12} sm={5}>
+                    <Col>
                         <Form.Control name="lastName" type="text" required maxLength={50} value={inputs.lastName} disabled />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" required controlId="dateOfBirth">
-                    <Form.Label column sm={2}>
+                    <Form.Label column sm={3}>
                         Date of Birth
                     </Form.Label>
-                    <Col xs={12} sm={5}>
+                    <Col>
                         <div className="datepicker">
                             <DatePicker className="form-control"
                                 dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
@@ -284,10 +285,10 @@ function EditUser(props) {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="email">
-                    <Form.Label column sm={2}>
+                    <Form.Label column sm={3}>
                         Email
                     </Form.Label>
-                    <Col xs={12} sm={5}>
+                    <Col>
                         <Form.Control name="email" type="text" required maxLength={50} value={inputs.email} onChange={handleOnChange} />
                         {!validStateList.isEmail &&
                             < Form.Control.Feedback className="d-block" type="invalid">
@@ -298,7 +299,7 @@ function EditUser(props) {
                 </Form.Group>
                 <fieldset>
                     <Form.Group as={Row} className="mb-3 align-items-center">
-                        <Form.Label as="legend" column sm={2}>
+                        <Form.Label as="legend" column sm={3}>
                             Gender
                         </Form.Label>
                         <Col xs={2}>
@@ -313,10 +314,10 @@ function EditUser(props) {
                     </Form.Group>
                 </fieldset>
                 <Form.Group as={Row} className="mb-3" controlId="joinedDate">
-                    <Form.Label column sm={2}>
+                    <Form.Label column sm={3}>
                         Joined Date
                     </Form.Label>
-                    <Col xs={12} sm={5}>
+                    <Col>
                     <div className="datepicker">
                             <DatePicker className="form-control"
                                 dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
@@ -343,8 +344,8 @@ function EditUser(props) {
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="id">
-                    <Form.Label column sm={2}>Type</Form.Label>
-                    <Col xs={12} sm={5}>
+                    <Form.Label column sm={3}>Type</Form.Label>
+                    <Col>
                         <Form.Select className="select" name="type" type="text" required as="select" aria-label="Default select example" onChange={handleOnChange} >
                             {roles.map((role) =>
                                 <option key={role.id}
@@ -357,14 +358,15 @@ function EditUser(props) {
                         </Form.Select>
                     </Col>
                 </Form.Group>
-                <Form.Group as={Row} className="mb-3">
-                    <Col sm={{ span: 10, offset: 4 }}>
+                <Form.Group as={Row} className="float-end mb-3">
+                    <Col>
                         {saveButton()}
                         <Link className="btn btn-outline-secondary" style={{ marginLeft: "40px" }} to="/manage_user">Cancel</Link>
                     </Col>
                 </Form.Group>
             </Form>
-        </>
+            </Col>
+        </div>
     )
 }
 export default withRouter(EditUser);

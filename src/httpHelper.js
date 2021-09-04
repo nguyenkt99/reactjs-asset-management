@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const url = 'https://asset-tttn.herokuapp.com/api';
-const url = 'https://api-asset-ptithcm.herokuapp.com/api';
+const url = 'https://asset-tttn.herokuapp.com/api';
+// const url = 'https://api-asset-ptithcm.herokuapp.com/api';
 const token = localStorage.getItem('token');
 
 export function get(endpoint) {

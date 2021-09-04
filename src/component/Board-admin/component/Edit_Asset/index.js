@@ -139,18 +139,15 @@ function EditAsset(props) {
   }
 
   return (
-    <>
-      <div className='p-5'>
-        <h5 className='mb-4' style={{ color: '#CF2338' }}>
-          Edit asset
-        </h5>
-
+    <div className='p-4'>
+      <h5 className='mb-4' style={{ color: '#CF2338' }}> Edit asset</h5>
+      <Col xs={12} sm={12} md={8}>
         <Form onSubmit={handleSubmit}>
           <Form.Group as={Row} className='mb-3' controlId='firstName' >
-            <Form.Label column sm={2}>
+            <Form.Label column sm={3}>
               Name
             </Form.Label>
-            <Col xs={12} sm={5}>
+            <Col>
               <Form.Control
                 name='assetName'
                 type='text'
@@ -161,15 +158,15 @@ function EditAsset(props) {
               <span id='error'>{errorNameAsset}</span>
             </Col>
           </Form.Group>
-          <Row>
-            <Col sm={2}>
+          <Row className="align-items-center mb-3">
+            <Col sm={3}>
               <div className='category_area'>
                 <div className='label'>
                   <span>Category</span>
                 </div>
               </div>
             </Col>
-            <Col xs={5}>
+            <Col>
               <div className='category_input'>
                 <div className='boder_search' style={{ background: "rgb(239 241 245)" }}>
                   {inputs.categoryName}
@@ -180,10 +177,10 @@ function EditAsset(props) {
           </Row>
 
           <Form.Group as={Row} className='mb-3' controlId='firstName'>
-            <Form.Label column sm={2}>
+            <Form.Label column sm={3}>
               Specification
             </Form.Label>
-            <Col xs={12} sm={5}>
+            <Col>
               <Form.Control
                 name='specification'
                 as='textarea'
@@ -200,10 +197,10 @@ function EditAsset(props) {
             className='mb-3'
             required
             controlId='installedDate'>
-            <Form.Label column sm={2}>
+            <Form.Label column sm={3}>
               Installed Date
             </Form.Label>
-            <Col xs={12} sm={5}>
+            <Col>
               <div className="datepicker">
                 <DatePicker className="form-control"
                   dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
@@ -222,7 +219,7 @@ function EditAsset(props) {
           </Form.Group>
           <fieldset>
             <Form.Group as={Row} className='mb-3 align-items-center'>
-              <Form.Label as='legend' column sm={2}>
+              <Form.Label as='legend' column sm={3}>
                 State
               </Form.Label>
 
@@ -272,8 +269,8 @@ function EditAsset(props) {
             </Form.Group>
           </fieldset>
 
-          <Form.Group as={Row} className='mb-3'>
-            <Col sm={{ span: 10, offset: 4 }}>
+          <Form.Group as={Row} className='float-end mb-3'>
+            <Col>
               <Button variant='danger' type='submit' disabled={!preSave()}>
                 Save
               </Button>
@@ -286,8 +283,8 @@ function EditAsset(props) {
             </Col>
           </Form.Group>
         </Form>
-      </div>
-    </>
+      </Col>
+    </div>
   );
 }
 export default withRouter(EditAsset);

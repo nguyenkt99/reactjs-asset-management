@@ -277,7 +277,7 @@ export default function User() {
 
     return (
         <>
-            <ModalTitle style={{ color: '#CF2338' }}>User List</ModalTitle>
+            <h5 style={{ color: '#CF2338' }}>User List</h5>
             <Row>
                 <Col>
                     <Dropdown autoClose="outside" className="drop-filter">

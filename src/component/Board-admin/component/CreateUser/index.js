@@ -236,133 +236,136 @@ export default function CreateUser() {
     }
 
     return (
-        <>
+        <div className="p-5">
             <h5 className="mb-4" style={{ color: "#CF2338" }}>Create user</h5>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group as={Row} className="mb-3" controlId="firstName">
-                    <Form.Label column sm={2}>
-                        First Name
-                    </Form.Label>
-                    <Col xs={12} sm={5}>
-                        <Form.Control name="firstName" type="text" required maxLength={20} value={inputs.firstName} onChange={handleOnChange} />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className="mb-3" controlId="lastName">
-                    <Form.Label column sm={2}>
-                        Last Name
-                    </Form.Label>
-                    <Col xs={12} sm={5}>
-                        <Form.Control name="lastName" type="text" required maxLength={50} value={inputs.lastName} onChange={handleOnChange} />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className="mb-3" required controlId="dateOfBirth">
-                    <Form.Label column sm={2}>
-                        Date of Birth
-                    </Form.Label>
-                    <Col xs={12} sm={5}>
-                        {/* <Form.Control name="dateOfBirth" type="date" isInvalid={!validStateList.isAgeValid} required value={dateOfBirth} onChange={handleOnChange} /> */}
-                        <div class="datepicker">
-                            <DatePicker className="form-control"
-                                dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
-                                onKeyDown={(e) => e.preventDefault()}
-                                selected={dateOfBirth && new Date(dateOfBirth)}
-                                onChange={(date) => setDateOfBirth(moment(date).format('YYYY-MM-DD'))}
-                                onClickOutside={openDatePickerDob}
-                                onSelect={openDatePickerDob}
-                                onFocus={openDatePickerDob}
-                                open={isOpenDatePickerDob}
-                            />
-                            <FaCalendarAlt className="icon-date" onClick={openDatePickerDob} />
-                        </div>
-                        {!validStateList.isAgeValid &&
-                            < Form.Control.Feedback className="d-block" type="invalid">
-                                {messageErrors.userUnder18}
-                            </Form.Control.Feedback>
-                        }
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className="mb-3" controlId="email">
-                    <Form.Label column sm={2}>
-                        Email
-                    </Form.Label>
-                    <Col xs={12} sm={5}>
-                        <Form.Control name="email" type="text" required maxLength={50} value={inputs.email} onChange={handleOnChange} />
-                        {!validStateList.isEmail &&
-                            < Form.Control.Feedback className="d-block" type="invalid">
-                                {messageErrors.emailInvalid}
-                            </Form.Control.Feedback>
-                        }
-                    </Col>
-                </Form.Group>
-                <fieldset>
-                    <Form.Group as={Row} className="mb-3 align-items-center">
-                        <Form.Label as="legend" column sm={2}>
-                            Gender
+            <Col xs={12} sm={12} md={8}>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group as={Row} className="mb-3" controlId="firstName">
+                        <Form.Label column sm={3}>
+                            First Name
                         </Form.Label>
-                        <Col xs={2}>
-                            <Form.Check
-                                type="radio" label="Female" name="gender" id="female" value="Female" checked={inputs.gender === "Female"} onChange={handleOnChange}
-                            />
-                        </Col>
-                        <Col xs={2}>
-                            <Form.Check type="radio" label="Male" name="gender" id="male" value="Male" checked={inputs.gender === "Male"} onChange={handleOnChange}
-                            />
+                        <Col>
+                            <Form.Control name="firstName" type="text" required maxLength={20} value={inputs.firstName} onChange={handleOnChange} />
                         </Col>
                     </Form.Group>
-                </fieldset>
-                <Form.Group as={Row} className="mb-3" controlId="joinedDate">
-                    <Form.Label column sm={2}>
-                        Joined Date
-                    </Form.Label>
-                    <Col xs={12} sm={5}>
-                        <div className="datepicker">
-                            <DatePicker className="form-control"
-                                dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
-                                onKeyDown={(e) => e.preventDefault()}
-                                selected={joinedDate && new Date(joinedDate)}
-                                onChange={(date) => setJoinedDate(moment(date).format('YYYY-MM-DD'))}
-                                onClickOutside={openDatePickerJd}
-                                onSelect={openDatePickerJd}
-                                onFocus={openDatePickerJd}
-                                open={isOpenDatePickerJd}
-                            />
-                            <FaCalendarAlt className="icon-date" onClick={openDatePickerJd} />
-                        </div>
-                        {(!validStateList.isJoinedDateValid &&
-                            < Form.Control.Feedback className="d-block" type="invalid">
-                                {messageErrors.joinedAtTheWeekend}
-                            </Form.Control.Feedback>)
-                            ||
-                            (!validStateList.isJoinedAfterDOB &&
+                    <Form.Group as={Row} className="mb-3" controlId="lastName">
+                        <Form.Label column sm={3}>
+                            Last Name
+                        </Form.Label>
+                        <Col>
+                            <Form.Control name="lastName" type="text" required maxLength={50} value={inputs.lastName} onChange={handleOnChange} />
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className="mb-3" required controlId="dateOfBirth">
+                        <Form.Label column sm={3}>
+                            Date of Birth
+                        </Form.Label>
+                        <Col>
+                            {/* <Form.Control name="dateOfBirth" type="date" isInvalid={!validStateList.isAgeValid} required value={dateOfBirth} onChange={handleOnChange} /> */}
+                            <div class="datepicker">
+                                <DatePicker className="form-control"
+                                    dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
+                                    onKeyDown={(e) => e.preventDefault()}
+                                    selected={dateOfBirth && new Date(dateOfBirth)}
+                                    onChange={(date) => setDateOfBirth(moment(date).format('YYYY-MM-DD'))}
+                                    onClickOutside={openDatePickerDob}
+                                    onSelect={openDatePickerDob}
+                                    onFocus={openDatePickerDob}
+                                    open={isOpenDatePickerDob}
+                                />
+                                <FaCalendarAlt className="icon-date" onClick={openDatePickerDob} />
+                            </div>
+                            {!validStateList.isAgeValid &&
                                 < Form.Control.Feedback className="d-block" type="invalid">
-                                    {messageErrors.joindDateBeforeDOB}
+                                    {messageErrors.userUnder18}
+                                </Form.Control.Feedback>
+                            }
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className="mb-3" controlId="email">
+                        <Form.Label column sm={3}>
+                            Email
+                        </Form.Label>
+                        <Col>
+                            <Form.Control name="email" type="text" required maxLength={50} value={inputs.email} onChange={handleOnChange} />
+                            {!validStateList.isEmail &&
+                                < Form.Control.Feedback className="d-block" type="invalid">
+                                    {messageErrors.emailInvalid}
+                                </Form.Control.Feedback>
+                            }
+                        </Col>
+                    </Form.Group>
+                    <fieldset>
+                        <Form.Group as={Row} className="mb-3 align-items-center">
+                            <Form.Label as="legend" column sm={3}>
+                                Gender
+                            </Form.Label>
+                            <Col xs={2}>
+                                <Form.Check
+                                    type="radio" label="Female" name="gender" id="female" value="Female" checked={inputs.gender === "Female"} onChange={handleOnChange}
+                                />
+                            </Col>
+                            <Col xs={2}>
+                                <Form.Check type="radio" label="Male" name="gender" id="male" value="Male" checked={inputs.gender === "Male"} onChange={handleOnChange}
+                                />
+                            </Col>
+                        </Form.Group>
+                    </fieldset>
+                    <Form.Group as={Row} className="mb-3" controlId="joinedDate">
+                        <Form.Label column sm={3}>
+                            Joined Date
+                        </Form.Label>
+                        <Col>
+                            <div className="datepicker">
+                                <DatePicker className="form-control"
+                                    dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
+                                    onKeyDown={(e) => e.preventDefault()}
+                                    selected={joinedDate && new Date(joinedDate)}
+                                    onChange={(date) => setJoinedDate(moment(date).format('YYYY-MM-DD'))}
+                                    onClickOutside={openDatePickerJd}
+                                    onSelect={openDatePickerJd}
+                                    onFocus={openDatePickerJd}
+                                    open={isOpenDatePickerJd}
+                                />
+                                <FaCalendarAlt className="icon-date" onClick={openDatePickerJd} />
+                            </div>
+                            {(!validStateList.isJoinedDateValid &&
+                                < Form.Control.Feedback className="d-block" type="invalid">
+                                    {messageErrors.joinedAtTheWeekend}
                                 </Form.Control.Feedback>)
-                        }
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className="mb-3" controlId="id">
-                    <Form.Label column sm={2}>Type</Form.Label>
-                    <Col xs={12} sm={5}>
-                        <Form.Select name="type" type="text" required as="select" aria-label="Default select example" onChange={handleOnChange}>
-                            <option value="">Select type</option>
-                            {roles.map((role) =>
-                                <option key={role.id}
-                                    value={role.name}
-                                >
-                                    {ROLEtoLowcase[role.name]}
-                                </option>
-                            )}
-                        </Form.Select>
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className="mb-3">
-                    <Col sm={{ span: 10, offset: 4 }}>
-                        {saveButton()}
-                        <Link className="btn btn-outline-secondary" disabled style={{ marginLeft: "40px" }} to="./manage_user">Cancel</Link>
-                    </Col>
-                </Form.Group>
-            </Form>
-        </>
+                                ||
+                                (!validStateList.isJoinedAfterDOB &&
+                                    < Form.Control.Feedback className="d-block" type="invalid">
+                                        {messageErrors.joindDateBeforeDOB}
+                                    </Form.Control.Feedback>)
+                            }
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className="mb-3" controlId="id">
+                        <Form.Label column sm={3}>Type</Form.Label>
+                        <Col>
+                            <Form.Select name="type" type="text" required as="select" aria-label="Default select example" onChange={handleOnChange}>
+                                <option value="">Select type</option>
+                                {roles.map((role) =>
+                                    <option key={role.id}
+                                        value={role.name}
+                                    >
+                                        {ROLEtoLowcase[role.name]}
+                                    </option>
+                                )}
+                            </Form.Select>
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className="mb-3" className="float-end">
+                        {/* <Col sm={{ span: 10, offset: 4 }}> */}
+                        <Col >
+                            {saveButton()}
+                            <Link className="btn btn-outline-secondary" disabled style={{ marginLeft: "40px" }} to="./manage_user">Cancel</Link>
+                        </Col>
+                    </Form.Group>
+                </Form>
+            </Col>
+        </div>
     )
 }
 

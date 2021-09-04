@@ -145,14 +145,14 @@ export default function CreateAssignment() {
 
     let userJsx =
         <Row>
-            <Col sm={2}>
+            <Col sm={3}>
                 <div className='user_asset_area'>
                     <div className='label_user'>
                         <span>User</span>
                     </div>
                 </div>
             </Col>
-            <Col sm={5} xs={12} className="user_area" onClick={handleUserDisplay}>
+            <Col className="user_area" onClick={handleUserDisplay}>
                 <div className="input_field">
                     <div className="border_search_info">
                         {user.fullName}
@@ -238,14 +238,14 @@ export default function CreateAssignment() {
 
     let assetJsx =
         <Row>
-            <Col sm={2}>
+            <Col sm={3}>
                 <div className='user_asset_area'>
                     <div className='label_asset'>
                         <span>Asset</span>
                     </div>
                 </div>
             </Col>
-            <Col sm={5} xs={12} className="asset_area" onClick={handleAssetDisplay}>
+            <Col className="asset_area" onClick={handleAssetDisplay}>
                 <div className="input_field">
                     <div className="border_search_info">
                         {asset.assetName}
@@ -441,58 +441,60 @@ export default function CreateAssignment() {
             })
     }
     return (
-        <>
+        <div className="p-5">
             <h5 className="mb-4" style={{ color: "#CF2338" }}>Create Assignment</h5>
-            <Form onSubmit={handleSubmit}>
-                {userJsx}
-                {assetJsx}
-                <Form.Group
-                    as={Row}
-                    className='mb-3'
-                    required
-                    controlId='installedDate'>
-                    <Form.Label column sm={2}>
-                        Assigned Date
-                    </Form.Label>
-                    <Col xs={12} sm={5}>
-                        <div className="datepicker">
-                            <DatePicker className="form-control"
-                                dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
-                                onKeyDown={(e) => e.preventDefault()}
-                                selected={assignedDate && new Date(assignedDate)}
-                                onChange={(date) => setassignedDate(moment(date).format('YYYY-MM-DD'))}
-                                minDate={new Date()}
-                                onClickOutside={openDatePicker}
-                                onSelect={openDatePicker}
-                                onFocus={openDatePicker}
-                                open={isOpenDatePicker}
+            <Col xs={12} sm={12} md={8}>
+                <Form onSubmit={handleSubmit}>
+                    {userJsx}
+                    {assetJsx}
+                    <Form.Group
+                        as={Row}
+                        className='mb-3'
+                        required
+                        controlId='installedDate'>
+                        <Form.Label column sm={3}>
+                            Assigned Date
+                        </Form.Label>
+                        <Col>
+                            <div className="datepicker">
+                                <DatePicker className="form-control"
+                                    dateFormat="dd/MM/yyyy" showMonthDropdown showYearDropdown scrollableYearDropdown yearDropdownItemNumber={50}
+                                    onKeyDown={(e) => e.preventDefault()}
+                                    selected={assignedDate && new Date(assignedDate)}
+                                    onChange={(date) => setassignedDate(moment(date).format('YYYY-MM-DD'))}
+                                    minDate={new Date()}
+                                    onClickOutside={openDatePicker}
+                                    onSelect={openDatePicker}
+                                    onFocus={openDatePicker}
+                                    open={isOpenDatePicker}
+                                />
+                                <FaCalendarAlt className="icon-date" onClick={openDatePicker} />
+                            </div>
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className='mb-3' controlId='firstName'>
+                        <Form.Label column sm={3}>
+                            Note
+                        </Form.Label>
+                        <Col>
+                            <Form.Control
+                                name='note'
+                                as='textarea'
+                                maxLength={100}
+                            // minLength={20}
+                            // onChange={handleOnChange}
                             />
-                            <FaCalendarAlt className="icon-date" onClick={openDatePicker} />
-                        </div>
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className='mb-3' controlId='firstName'>
-                    <Form.Label column sm={2}>
-                        Note
-                    </Form.Label>
-                    <Col xs={12} sm={5}>
-                        <Form.Control
-                            name='note'
-                            as='textarea'
-                            maxLength={100}
-                        // minLength={20}
-                        // onChange={handleOnChange}
-                        />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} className="mb-3">
-                    <Col sm={{ span: 10, offset: 4 }}>
-                        {saveButton()}
-                        <Link className="btn btn-outline-secondary" style={{ marginLeft: "40px" }} to="./manage_assignment">Cancel</Link>
-                    </Col>
-                </Form.Group>
-            </Form>
-        </>
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className="float-end mb-3">
+                        <Col>
+                            {saveButton()}
+                            <Link className="btn btn-outline-secondary" style={{ marginLeft: "40px" }} to="./manage_assignment">Cancel</Link>
+                        </Col>
+                    </Form.Group>
+                </Form>
+            </Col>
+        </div>
     )
 }
 

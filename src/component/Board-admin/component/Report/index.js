@@ -107,7 +107,7 @@ export default function Report() {
 
     return (
         <>
-            <ModalTitle style={{ color: '#CF2338' }}>Report</ModalTitle>
+            <h5 style={{ color: '#CF2338' }}>Report</h5>
             <Row>
                 <div>
                     <Button className="float-end" variant="danger" onClick={() => exportToCSV(dataReport, `asset_management_${DATE}`)}>Export to .xlsx</Button>

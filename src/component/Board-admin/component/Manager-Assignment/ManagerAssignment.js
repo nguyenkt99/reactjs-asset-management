@@ -18,7 +18,7 @@ import {
 import { HiFilter } from 'react-icons/hi';
 import { GrEdit } from 'react-icons/gr';
 import { GrEditCus } from '../../../icon/GrEditCus';
-import { CgUndo } from 'react-icons/cg';
+import { FaUndo } from 'react-icons/fa';
 import { CgCloseO } from 'react-icons/cg';
 import { get, del, post } from '../../../../httpHelper';
 import { BsFillCaretDownFill, BsSearch } from "react-icons/bs";
@@ -307,7 +307,7 @@ export default function User() {
 
   return (
     <>
-      <ModalTitle style={{ color: '#CF2338' }}>Assignment List</ModalTitle>
+      <h5 style={{ color: '#CF2338' }}>Assignment List</h5>
       <div className="d-flex justify-content-between">
         <Dropdown autoClose="outside" className="drop-filter">
           <Button className="dropdown-button col-md-6 col-sm-12" disabled text='State'>
@@ -467,9 +467,9 @@ export default function User() {
                           onClick={() => handleDeleteClick(a)}
                         />
                         {(a.state === 'ACCEPTED' && !a.isCreatedRequest) ? (
-                          <CgUndo id="undo-assignment" style={{ cursor: 'pointer' }} onClick={() => onClickRequestForReturning(a.id)} />
+                          <FaUndo id="undo-assignment" style={{ cursor: 'pointer' }} onClick={() => onClickRequestForReturning(a.id)} />
                         ) : (
-                          <CgUndo id="undo-assignment" style={{ color: '#ccc' }} />
+                          <FaUndo id="undo-assignment" style={{ color: '#ccc' }} />
                         )}
                       </div>
                     </td>
