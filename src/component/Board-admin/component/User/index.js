@@ -201,6 +201,10 @@ export default function User() {
     }, [typeChecked, stateChecked, keySearch]);
 
     const handleDelete = (StaffCode) => {
+        setValidDisable(false);
+        setValidDelete(false);
+        setIsDeleteYourself(false);
+        
         // check valid delete user
         const endpoint = '/users/disable/' + StaffCode
         get(endpoint)
@@ -217,8 +221,6 @@ export default function User() {
                 // }
             })
             .catch(error => {
-                setValidDisable(false);
-                setValidDelete(false);
                 // toastMessage(error.response.data.message)
                 if(error.response.status === 400) { // delete yourself
                     setIsDeleteYourself(true);
