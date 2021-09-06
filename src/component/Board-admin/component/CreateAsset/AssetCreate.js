@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Form, Button, Modal } from 'react-bootstrap';
+import { Row, Col, Form, Button, Modal, Spinner } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { FaAngleDown, FaCheck, FaTimes } from 'react-icons/fa';
 import { del, get, post, put } from '../../../../httpHelper';
@@ -26,6 +26,7 @@ export default function AssetCreate() {
   const [categoryEdit, setCategoryEdit] = useState();
   const [showModalDeleteCategory, setShowModalDeleteCategory] = useState(false);
   const [showModalErrorDeleteCategory, setShowModalErrorDeleteCategory] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [inputs, setInputs] = useState({
     assetName: '',
     specification: '',
@@ -84,10 +85,7 @@ export default function AssetCreate() {
       check = false;
     }
 
-    if (
-      inputAddCategory.prefix.length < 2 ||
-      inputAddCategory.prefix.length > 2
-    ) {
+    if (inputAddCategory.prefix.length < 2 || inputAddCategory.prefix.length > 2) {
       check = false;
     }
 
@@ -164,6 +162,7 @@ export default function AssetCreate() {
 
     inputs.installedDate = installedDate.split('-').reverse().join('/');
 
+    setIsSaving(true);
     post('/asset', inputs)
       .then((res) => {
         history.push({
@@ -174,6 +173,7 @@ export default function AssetCreate() {
         });
       })
       .catch((error) => {
+        setIsSaving(false);
         console.log(error);
       });
   };
@@ -501,9 +501,15 @@ export default function AssetCreate() {
 
             <Form.Group as={Row} className='float-end mb-3'>
               <Col>
-                <Button variant='danger' type='submit' disabled={!preSave()}>
-                  Save
-                </Button>
+                {!isSaving ?
+                  <Button variant='danger' type='submit' disabled={!preSave()}>
+                    Save
+                  </Button>
+                  :
+                  <Button variant="danger" type="submit" disabled>
+                    <Spinner animation="border" size="sm" variant="light" />Save
+                  </Button>
+                }
                 <Link
                   className='btn btn-outline-secondary'
                   style={{ marginLeft: '40px' }}

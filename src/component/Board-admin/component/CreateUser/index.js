@@ -222,7 +222,7 @@ export default function CreateUser() {
     const saveButton = () => {
         if (isSaving)
             return <Button variant="danger" type="submit" disabled><Spinner animation="border" size="sm" variant="light" />Save</Button>
-        else if (Object.values(inputs).every(input => input !== ''))
+        else if (Object.values(inputs).every(input => input !== '') && dateOfBirth !== '' && joinedDate !== '')
             return <Button variant="danger" type="submit">Save</Button>
         return <Button variant="danger" type="submit" disabled>Save</Button>;
     }

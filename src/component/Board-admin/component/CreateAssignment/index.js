@@ -328,6 +328,7 @@ export default function CreateAssignment() {
                 </Modal.Dialog>
             </Col>
         </Row>
+
     const saveButton = () => {
         if (isSaving)
             return <Button variant="danger" type="submit" disabled><Spinner animation="border" size="sm" variant="light" />Save</Button>
@@ -419,14 +420,15 @@ export default function CreateAssignment() {
         console.log(user);
         console.log(e.target.note.value);
         let date = assignedDate.split("-").reverse().join("/");
-        console.log(date);
-        setIsSaving(false);
+
         const formData = {
             assetCode: asset.assetCode,
             note: e.target.note.value,
             assignedTo: user.username,
             assignedDate: date
         }
+
+        setIsSaving(true);
         post('/assignment', formData)
             .then((res) => {
                 history.push({
@@ -437,9 +439,11 @@ export default function CreateAssignment() {
                 });
             })
             .catch((error) => {
+                setIsSaving(false);
                 console.log(error.response);
             })
     }
+
     return (
         <div className="p-5">
             <h5 className="mb-4" style={{ color: "#CF2338" }}>Create Assignment</h5>

@@ -459,13 +459,14 @@ function EditAssignment(props) {
         console.log(e.target.note.value);
         let date = assignedDate.split("-").reverse().join("/");
         console.log(date);
-        setIsSaving(false);
         const formData = {
             assetCode: asset.assetCode,
             note: e.target.note.value.trim(),
             assignedTo: user.username,
             assignedDate: date
         }
+
+        setIsSaving(true);
         put(`/assignment/${assignment.id}`, formData)
             .then((res) => {
                 history.push({
@@ -476,6 +477,7 @@ function EditAssignment(props) {
                 });
             })
             .catch((error) => {
+                setIsSaving(false);
                 console.log(error.response);
             })
     }
