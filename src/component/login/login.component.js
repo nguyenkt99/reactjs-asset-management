@@ -19,6 +19,7 @@ import { Button } from '@material-ui/core';
 
 import logo from '../../assets/Logo_lk.png';
 import { Link } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 
 export default class Login extends Component {
   constructor(props) {
@@ -37,6 +38,7 @@ export default class Login extends Component {
       message: '',
       showPassword: false,
       open: false,
+      isSaving: false
     };
   }
 
@@ -56,6 +58,7 @@ export default class Login extends Component {
     this.form.validateAll();
 
     if (this.checkBtn.context._errors.length === 0) {
+      this.setState({ isSaving: true });
       AuthService.login(this.state.username, this.state.password)
         .then(() => {
           //Quay tro ve Trang Home
@@ -63,6 +66,8 @@ export default class Login extends Component {
           window.location.reload();
         })
         .catch((error) => {
+          this.setState({ isSaving: false });
+
           const resMessage =
             (error.response &&
               error.response.data &&
@@ -200,12 +205,22 @@ export default class Login extends Component {
                         Forgotten password?
                       </Link>
                     </div>
-                    <div className='form-group login-group'>
-                      <button
-                        className='btnlogin btn btn-primary btn-block'
-                        disabled={!isEnabled}>
-                        <span>Login</span>
-                      </button>
+                    {/* <div className='form-group login-group'> */}
+                    <div className='form-group'>
+                      {this.state.isSaving ?
+                        <button
+                          className='btnlogin btn btn-primary btn-block'
+                          disabled>
+                          <Spinner animation="border" size="sm" variant="light" />
+                          <span>Login</span>
+                        </button>
+                        :
+                        <button
+                          className='btnlogin btn btn-primary btn-block'
+                          disabled={!isEnabled}>
+                          <span>Login</span>
+                        </button>
+                      }
                     </div>
                     <CheckButton
                       style={{ display: 'none' }}
