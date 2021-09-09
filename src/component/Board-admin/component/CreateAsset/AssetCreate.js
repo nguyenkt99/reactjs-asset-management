@@ -324,7 +324,7 @@ export default function AssetCreate() {
     <>
       <div className='p-5'>
         <h5 className='mb-4' style={{ color: '#CF2338' }}>Create asset</h5>
-        <Col xs={12} sm={12} md={8}>
+        <Col xs={12} sm={12} md={7}>
           <Form onSubmit={handleSubmit}>
             <Form.Group as={Row} className='mb-3' controlId='firstName'>
               <Form.Label column sm={3}>

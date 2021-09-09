@@ -31,6 +31,11 @@ const Menu = ({ tableTab }) => {
         <Link to='/home' className="non-text-decoration">
           <ListGroupItem action onClick={() => setSelectedItem(1)} active={selected === 1}>Home</ListGroupItem>
         </Link>
+        {user.role === 'ROLE_STAFF' &&
+          <Link to='/request_assign' className="non-text-decoration">
+            <ListGroupItem action onClick={() => setSelectedItem(8)} active={selected === 8}>Request for Assigning</ListGroupItem>
+          </Link>
+        }
         {
           user.role === 'ROLE_ADMIN' ?
             <>
@@ -48,6 +53,9 @@ const Menu = ({ tableTab }) => {
               </Link>
               <Link to='/report' className="non-text-decoration">
                 <ListGroupItem action onClick={() => setSelectedItem(6)} active={selected === 6}>Report</ListGroupItem>
+              </Link>
+              <Link to='/request_assign' className="non-text-decoration">
+                <ListGroupItem action onClick={() => setSelectedItem(7)} active={selected === 7}>Request for Assigning</ListGroupItem>
               </Link>
             </>
             :

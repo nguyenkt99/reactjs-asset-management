@@ -187,6 +187,7 @@ export default function Request() {
 
     const filterSort = (data, keySearch) => {
         return data.filter((e) => (
+            e.id.toString() === keySearch ||
             e.assetCode.toLowerCase().includes(keySearch.toLowerCase()) ||
             e.assetName.toLowerCase().includes(keySearch.toLowerCase()) ||
             e.requestBy.toLowerCase().includes(keySearch.toLowerCase())

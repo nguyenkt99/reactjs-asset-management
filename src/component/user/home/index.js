@@ -25,6 +25,7 @@ export default function UserAssignment() {
   const [showModalAccept, setShowModalAccept] = useState(false);
   const [showModalDeclined, setShowModalDeclined] = useState(false);
   const [showModalRequest, setShowModalRequest] = useState(false);
+  const [note, setNote] = useState('');
 
   useEffect(() => {
     fetchUserAssignment();
@@ -133,7 +134,7 @@ export default function UserAssignment() {
   };
 
   const handleAccept = () => {
-    put(`/assignment/staff/${assignmentCode}?state=accept`)
+    put(`/assignment/staff/${assignmentCode}`, { state: "ACCEPTED" })
       .then((res) => {
         setData(data.filter(e => {
           if (e.id === assignmentCode)
@@ -159,7 +160,7 @@ export default function UserAssignment() {
   }
 
   const handleDeclined = () => {
-    put(`/assignment/staff/${assignmentCode}?state=declined`)
+    put(`/assignment/staff/${assignmentCode}`, {state: "CANCELED_ASSIGN", note: note})
       .then((res) => {
         // setData(data.filter(e => e.id !== assignmentCode))
         // setAssignments(assignments.filter(e => e.id !== assignmentCode))
@@ -168,6 +169,7 @@ export default function UserAssignment() {
         let newAssignments = assignments;
         let item = { ...newAssignments[index] };
         item.state = STATE.CANCELED_ASSIGN;
+        item.note = note;
         newAssignments[index] = item;
         setAssignments(newAssignments);
         setData(newAssignments);
@@ -289,7 +291,7 @@ export default function UserAssignment() {
                             {a.state === STATE.ACCEPTED && !a.isCreatedRequest ?
                               <FaUndo id="undo-assignment" style={{ cursor: 'pointer' }} onClick={() => onClickRequestForReturning(a.id)} />
                               :
-                              <FaUndo id="undo-assignment" style={{ color:'#ccc' }} />
+                              <FaUndo id="undo-assignment" style={{ color: '#ccc' }} />
                             }
                           </>
                         }
@@ -424,11 +426,20 @@ export default function UserAssignment() {
       </Modal>
       <Modal centered show={showModalDeclined}>
         <Modal.Header>
-          <Modal.Title style={{ color: '#dc3545' }}>Are you sure?</Modal.Title>
+          <Modal.Title style={{ color: '#dc3545' }}>Are you sure decline this assignment?</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Do you want to decline this assignment?</Modal.Body>
+        <Modal.Body>
+          <Form.Group as={Row} className='mb-3' controlId='note'>
+            <Form.Label column sm={1}>
+              Note
+            </Form.Label>
+            <Col>
+              <Form.Control name='note' as='textarea' required maxLength={100} onChange={(e) => setNote(e.target.value)} />
+            </Col>
+          </Form.Group>
+        </Modal.Body>
         <Modal.Footer style={{ display: 'block', marginLeft: '32px' }}>
-          <Button variant='danger' onClick={handleDeclined}>
+          <Button variant='danger' onClick={handleDeclined} disabled={note === ''}>
             Decline
           </Button>
           <Button variant='secondary' onClick={() => setShowModalDeclined(false)}>

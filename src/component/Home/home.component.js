@@ -38,6 +38,9 @@ import ChangePassword from '../user/changepassword'
 import Request from '../Board-admin/component/Request';
 import Report from '../Board-admin/component/Report';
 import { get } from '../../httpHelper';
+import RequestForAssigning from '../Board-admin/component/RequestForAssigning';
+import RequestAssignUser from '../user/RequestAssignUser';
+import CreateRequestAssign from '../user/CreateRequestAssign';
 
 const Home = (props) => {
   const history = useHistory();
@@ -93,6 +96,8 @@ const Home = (props) => {
       //Report
       case 6:
         return setnavbarName('Report');
+      case 7:
+        return setnavbarName('Request for Assigning');
       default:
         console.error('Some thing wrong!!!');
     }
@@ -115,6 +120,8 @@ const Home = (props) => {
     path = navbarName + " > Create New Assignment"
   else if (location.pathname.split('/')[1] === "edit-assignment")
     path = navbarName + " > Edit Assignment"
+  else if (location.pathname.split('/')[1] === "/create-request-assign")
+    path = navbarName + " > Create request for assigning"
   else path = navbarName;
 
   return (
@@ -146,55 +153,55 @@ const Home = (props) => {
           <FormGroup row>
             <Label sm={4}>Staff Code</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.staffCode}/>
+              <Input type="text" plaintext readOnly value={profile && profile.staffCode} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Full Name</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.fullName}/>
+              <Input type="text" plaintext readOnly value={profile && profile.fullName} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Username</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.username}/>
+              <Input type="text" plaintext readOnly value={profile && profile.username} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Date of Birth</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.dateOfBirth}/>
+              <Input type="text" plaintext readOnly value={profile && profile.dateOfBirth} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Email</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.email}/>
+              <Input type="text" plaintext readOnly value={profile && profile.email} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Gender</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.gender}/>
+              <Input type="text" plaintext readOnly value={profile && profile.gender} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Joined Date</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.joinedDate}/>
+              <Input type="text" plaintext readOnly value={profile && profile.joinedDate} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Type</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && ROLEtoLowcase[profile.type]}/>
+              <Input type="text" plaintext readOnly value={profile && ROLEtoLowcase[profile.type]} />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Label sm={4}>Location</Label>
             <Col sm={8}>
-              <Input type="text" plaintext readOnly value={profile && profile.location}/>
+              <Input type="text" plaintext readOnly value={profile && profile.location} />
             </Col>
           </FormGroup>
         </ModalBody>
@@ -266,6 +273,15 @@ const Home = (props) => {
             }} />
             <Route path="/report" render={() => {
               if (user.role === "ROLE_ADMIN") return <Report />
+              else return <Redirect to="/home" />
+            }} />
+            <Route path="/request_assign" render={() => {
+              if (user.role === "ROLE_ADMIN") return <RequestForAssigning />
+              else if (user.role === "ROLE_STAFF") return <RequestAssignUser />
+              else return <Redirect to="/home" />
+            }} />
+            <Route path="/create-request-assign" render={() => {
+              if (user.role === "ROLE_STAFF") return <CreateRequestAssign />
               else return <Redirect to="/home" />
             }} />
           </Switch>

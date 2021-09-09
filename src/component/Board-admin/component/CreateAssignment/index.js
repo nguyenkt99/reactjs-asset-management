@@ -17,7 +17,6 @@ export default function CreateAssignment() {
     const [asset, setasset] = useState({ assetName: '' })
     const [assets, setassets] = useState([]);
     const [isSaving, setIsSaving] = useState(false);
-    const [chossed, setchossed] = useState(false)
     const [assetCodeASC, setAssetCodeASC] = useState(true);
     const [assetNameASC, setAssetNameASC] = useState(false);
     const [categoryASC, setCategoryASC] = useState(false);
@@ -416,9 +415,6 @@ export default function CreateAssignment() {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(asset);
-        console.log(user);
-        console.log(e.target.note.value);
         let date = assignedDate.split("-").reverse().join("/");
 
         const formData = {
@@ -447,7 +443,7 @@ export default function CreateAssignment() {
     return (
         <div className="p-5">
             <h5 className="mb-4" style={{ color: "#CF2338" }}>Create Assignment</h5>
-            <Col xs={12} sm={12} md={8}>
+            <Col xs={12} sm={12} md={7}>
                 <Form onSubmit={handleSubmit}>
                     {userJsx}
                     {assetJsx}
