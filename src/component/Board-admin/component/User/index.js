@@ -62,7 +62,7 @@ export default function User() {
             if (response.status === 200) {
                 let newUsers = response.data
                 if (history.location.state) {
-                    newUsers.unshift(newUsers.splice(newUsers.findIndex(item => item.id === history.location.state.id), 1)[0])
+                    newUsers.unshift(newUsers.splice(newUsers.findIndex(item => item.staffCode === history.location.state.staffCode), 1)[0])
                 }
                 setData(newUsers)
                 setUsers(newUsers)
